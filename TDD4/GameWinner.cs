@@ -2,6 +2,7 @@
 {
     public enum GameWinner
     {
-        Player1
+        Player1,
+        Player2
     }
 }
