@@ -24,7 +24,7 @@ namespace TDD4
                     PlayerOneSelection = Selection.Paper;
                     break;
             }
-            throw new Exception("I ran out of time to do input errors politely");
+            //throw new Exception("I ran out of time to do input errors politely");
         }
 
         public Selection PlayerTwoSelection;
@@ -43,7 +43,7 @@ namespace TDD4
                     PlayerTwoSelection = Selection.Paper;
                     break;
             }
-            throw new Exception("I ran out of time to do input errors politely");
+            //throw new Exception("I ran out of time to do input errors politely");
         }
 
         public static RoundResult Wins(Selection player1Selection, Selection player2Selection)
