@@ -44,6 +44,8 @@ namespace TDD4
             } while (game.GetWinner() == GameWinner.Undecided);
 
             Console.WriteLine("Congratulations " + game.GetWinner());
+
+            Console.ReadLine();
         }
     }
 }
