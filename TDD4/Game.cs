@@ -1,14 +1,28 @@
-﻿namespace TDD4
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace TDD4
 {
     public class Game
     {
-        public int Player1Score { get; set; }
-        public int Player2Score { get; set; }
+        public List<RoundResult> roundResults = new List<RoundResult>();
 
         public GameWinner GetWinner()
         {
-            if (Player2Score == 3) return GameWinner.Player2;
-            return GameWinner.Player1;
+            if (roundResults.Count < 3)
+            {
+                return GameWinner.Undecided;
+            }
+
+            var player1Wins = roundResults.Count(x => x == RoundResult.Player1Win);
+            var player2Wins = roundResults.Count(x => x == RoundResult.Player2Win);
+
+            if (player1Wins > player2Wins)
+            {
+                return GameWinner.Player1;
+            }
+
+            return GameWinner.Player2;
         }
     }
 }
