@@ -8,40 +8,41 @@ namespace TDD4
 {
     public class Round
     {
-        public static Selection Wins(Selection player1Selection, Selection player2Selection)
+        public static RoundResult Wins(Selection player1Selection, Selection player2Selection)
         {
+            if (player1Selection == player2Selection) return RoundResult.Draw;
+
             switch (player1Selection)
             {
                     case Selection.Rock:
                     switch (player2Selection)
                     {
                         case Selection.Scissors:
-                            return Selection.Rock;
+                            return RoundResult.Player1Win;
                         case Selection.Paper:
-                            return Selection.Paper;
+                            return RoundResult.Player2Win;                       
                     }
                     break;
                     case Selection.Paper:
                     switch (player2Selection)
                     {
                         case Selection.Scissors:
-                            return Selection.Scissors;
+                            return RoundResult.Player2Win;
                         case Selection.Rock:
-                            return Selection.Paper;
+                            return RoundResult.Player1Win;
                     }
                     break;
                     case Selection.Scissors:
                     switch (player2Selection)
                     {
                         case Selection.Rock:
-                            return Selection.Rock;
+                            return RoundResult.Player2Win;
                         case Selection.Paper:
-                            return Selection.Scissors;
+                            return RoundResult.Player1Win;
                     }
                     break;
             }
-
-            return player1Selection;
+            throw new ArgumentException($"Didn't recognise selection combination: {player1Selection} {player2Selection}");
         }
     }
 }

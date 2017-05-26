@@ -15,19 +15,25 @@ namespace TDD4
         [Test]
         public void RockBluntsScissors()
         {
-            Round.Wins(Selection.Rock, Selection.Scissors).Should().Be(Selection.Rock);
+            Round.Wins(Selection.Rock, Selection.Scissors).Should().Be(RoundResult.Player1Win);
         }
 
         [Test]
         public void ScissorsCutsPaper()
         {
-            Round.Wins(Selection.Scissors, Selection.Paper).Should().Be(Selection.Scissors);
+            Round.Wins(Selection.Scissors, Selection.Paper).Should().Be(RoundResult.Player1Win);
         }
 
         [Test]
         public void PaperWrapsRock()
         {
-            Round.Wins(Selection.Rock, Selection.Paper).Should().Be(Selection.Paper);
+            Round.Wins(Selection.Rock, Selection.Paper).Should().Be(RoundResult.Player2Win);
+        }
+
+        [Test]
+        public void RoundDrawOnBothSelectingRock()
+        {
+            Round.Wins(Selection.Rock, Selection.Rock).Should().Be(RoundResult.Draw);
         }
     }
 }
