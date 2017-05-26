@@ -10,7 +10,7 @@ using NUnit.Framework;
 namespace TDD4
 {
     [TestFixture]
-    public class RockPaperScissorsTests
+    public class RoundWinnerTests
     {
         [Test]
         public void RockBluntsScissors()
