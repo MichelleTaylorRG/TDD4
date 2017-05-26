@@ -54,6 +54,7 @@
     <Compile Include="GameWinnerTests.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameWinner.cs" />
+    <Compile Include="PlayerSelectionTests.cs" />
     <Compile Include="RoundWinnerTests.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
