@@ -23,7 +23,11 @@ namespace TDD4
         {
             Round.Wins(Selection.Scissors, Selection.Paper).Should().Be(Selection.Scissors);
         }
+
+        [Test]
+        public void PaperWrapsRock()
+        {
+            Round.Wins(Selection.Rock, Selection.Paper).Should().Be(Selection.Paper);
+        }
     }
-
-
 }
