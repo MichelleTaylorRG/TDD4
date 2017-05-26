@@ -8,9 +8,9 @@ namespace TDD4
 {
     public class Round
     {
-        public static Selection Wins(Selection rock, Selection scissors)
+        public static Selection Wins(Selection player1Selection, Selection player2Selection)
         {
-            return Selection.Rock;
+            return player1Selection;
         }
     }
 }

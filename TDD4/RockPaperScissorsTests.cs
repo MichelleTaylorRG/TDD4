@@ -13,11 +13,16 @@ namespace TDD4
     public class RockPaperScissorsTests
     {
         [Test]
-        public void RockBeatsScissors()
+        public void RockBluntsScissors()
         {
             Round.Wins(Selection.Rock, Selection.Scissors).Should().Be(Selection.Rock);
         }
 
+        [Test]
+        public void ScissorsCutsPaper()
+        {
+            Round.Wins(Selection.Scissors, Selection.Paper).Should().Be(Selection.Scissors);
+        }
     }
 
 

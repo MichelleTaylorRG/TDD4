@@ -9,6 +9,7 @@ namespace TDD4
     public enum Selection
     {
         Rock,
-        Scissors
+        Scissors,
+        Paper
     }
 }
